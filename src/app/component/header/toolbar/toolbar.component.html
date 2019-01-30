@@ -1,0 +1,64 @@
+<mat-toolbar color="primary">
+  <!-- button for toggle sidenav -->
+  <div>
+    <button mat-icon-button (click)="onToggleSideNav()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+  </div>
+
+  <a routerLink="/"  class="a-logo"><img src="../../../../assets/images/logo.png"  class="logo"
+                              width="50px" height="40px"></a>
+
+
+  <a  [class.active]="isDashboardActive" mat-button  (click)="onDashboard()" >
+    Dashboard <mat-icon>move_to_inbox</mat-icon>
+  </a>
+
+      <!-- Courses -->
+        <mat-menu #course="matMenu" style="margin-left: 10px">
+          <button mat-menu-item (click)="onCourseTable()"><mat-icon >table_chart</mat-icon> Courses </button>
+          <button mat-menu-item (click)="onCourseEdit()"><mat-icon>add</mat-icon>Add Courses</button>
+          <button mat-menu-item > <mat-icon>delete</mat-icon>Delete</button>
+        </mat-menu>
+
+        <a  [class.active]="isCourseActive" mat-button  [matMenuTriggerFor]="course" >
+          Courses <mat-icon>move_to_inbox</mat-icon>
+        </a>
+
+      <!-- Students -->
+        <mat-menu #students="matMenu" >
+          <button mat-menu-item (click)="onStudentTable()"><mat-icon>table_chart</mat-icon>Students Table </button>
+          <button mat-menu-item (click)="onAddStudent()"><mat-icon>add</mat-icon> Add New Student</button>
+          <button mat-menu-item >Register Attendance</button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item> <mat-icon>delete</mat-icon>Delete</button>
+        </mat-menu>
+
+        <a  [class.active]="isStudentActive" mat-button [matMenuTriggerFor]="students">
+          Students <mat-icon>how_to_reg</mat-icon>
+        </a>
+
+
+    <div fxFlex
+         fxLayoutAlign="flex-end">
+      <mat-list fxLayout fxLayoutGap="2px">
+        <!-- Setting  -->
+        <mat-list-item>
+          <mat-menu #rootMenu="matMenu"  >
+            <button mat-button-icon mat-menu-item>Log in <mat-icon >input</mat-icon></button>
+            <button [routerLink]="'/logout'" mat-menu-item>Log Out <mat-icon>eject</mat-icon> </button>
+            <button mat-menu-item [matMenuTriggerFor]="setting">Settings</button>
+          </mat-menu>
+
+          <mat-menu #setting="matMenu"  >
+            <button mat-menu-item><mat-icon >people</mat-icon> Users</button>
+          </mat-menu>
+
+          <a mat-icon-button [matMenuTriggerFor]="rootMenu"  dir="rtl">
+            <mat-icon>more_vert</mat-icon>
+          </a>
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+</mat-toolbar>

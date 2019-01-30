@@ -1,0 +1,14 @@
+.mat-expansion-panel-header
+{
+  background-color: lightblue;
+}
+.student-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+.personal-details {
+  min-width: 60%;
+}
+.contact-details {
+  min-width: 40%;
+}

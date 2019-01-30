@@ -1,0 +1,11 @@
+.main-section{
+  background-color: white;
+  height: 690px;
+}
+.div-tab{
+  background-color: lightgray;
+  height: 595px;
+  overflow: auto;
+  margin-right: 5px;
+  margin-left: 5px;
+}

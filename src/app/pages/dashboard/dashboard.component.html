@@ -1,0 +1,11 @@
+<mat-toolbar class="container-toolbar">
+  <mat-toolbar-row >
+   <a   mat-button routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"   routerLink="./students">Students</a>
+    <a mat-button routerLinkActive="active" routerLink="./courses">Courses</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,48 @@
+<section class="main-section">
+  <mat-tab-group mat-stretch-tabs >
+    <!--first phase-->
+    <mat-tab class="phase-tab" >
+      <ng-template mat-tab-label >
+        <mat-list fxLayout>
+          <mat-list-item><mat-icon>face</mat-icon></mat-list-item>
+          <mat-list-item>First Phase </mat-list-item>
+          <mat-list-item> <span style="direction:rtl">number of students </span></mat-list-item>
+        </mat-list>
+      </ng-template>
+      <mat-tab-group color="primary" backgroundColor="primary" headerPosition="below" color="accent"
+                     animationDuration="2000ms"
+                     >
+        <mat-tab  label="level 1" >
+          <div class="div-tab">
+            <app-student-container></app-student-container>
+          </div>
+
+        </mat-tab>
+        <mat-tab  label="level 2">Hello world</mat-tab>
+        <mat-tab  label="level 3"></mat-tab>
+        <mat-tab  label="level 4"></mat-tab>
+        <mat-tab  label="level 5"></mat-tab>
+        <mat-tab  label="level 6"></mat-tab>
+      </mat-tab-group>
+    </mat-tab>
+
+
+    <!--second phase-->
+    <mat-tab >
+      <ng-template mat-tab-label >
+        <mat-list fxLayout>
+          <mat-list-item><mat-icon>face</mat-icon></mat-list-item>
+          <mat-list-item>First Phase </mat-list-item>
+          <mat-list-item> <span style="direction:rtl">44 students </span></mat-list-item>
+        </mat-list>
+      </ng-template>
+      <mat-tab-group color="primary" backgroundColor="primary" headerPosition="below" color="accent"
+                     animationDuration="2000ms"
+                     class="div-tab">
+        <mat-tab  label="level 1"></mat-tab>
+        <mat-tab  label="level 2"></mat-tab>
+        <mat-tab  label="level 3"></mat-tab>
+      </mat-tab-group>
+    </mat-tab>
+  </mat-tab-group>
+</section>

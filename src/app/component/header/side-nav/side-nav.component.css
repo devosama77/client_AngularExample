@@ -1,0 +1,21 @@
+.nav-caption
+{
+
+  width: 120px;
+
+}
+
+
+mat-sidenav{
+  width: 300px
+}
+
+.a-lang
+{
+  direction: rtl;
+
+
+}
+mat-sidenav-container,mat-sidenav-content,mat-sidenav{
+  height:100%;
+}
